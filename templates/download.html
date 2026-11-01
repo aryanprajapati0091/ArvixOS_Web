@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Arvix OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#FF7E00', secondary: '#FFB347', bg: '#050505', cardbg: '#111111' }, fontFamily: { sans: ['Outfit', 'sans-serif'] } } } }
+    </script>
+</head>
+<body class="font-sans antialiased text-white bg-bg">
+    <div class="ambient-glow"></div>
+    
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 border-b border-white/5 backdrop-blur-md bg-black/50">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="h-10 transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_10px_rgba(255,126,0,0.8)]">
+                <span class="text-2xl font-bold tracking-widest text-white">ARVIX<span class="text-primary">OS</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="/" class="nav-link text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="/download" class="nav-link text-primary hover:text-white transition-colors">Download</a>
+                <a href="/about" class="nav-link text-gray-400 hover:text-white transition-colors">About Developer</a>
+                <a href="/contact" class="nav-link text-gray-400 hover:text-white transition-colors">Contact</a>
+            </div>
+            <a href="/download" class="btn-glow hidden md:flex bg-primary/10 border border-primary text-primary px-6 py-2 rounded-full text-sm font-bold hover:bg-primary hover:text-black transition-all">
+                Download v2.0
+            </a>
+        </div>
+    </nav>
+    
+
+    <section class="min-h-screen pt-32 pb-24 px-6 flex items-center justify-center">
+        <div class="max-w-5xl w-full text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Download <span class="text-gradient">Arvix OS</span></h1>
+            <p class="text-gray-400 mb-12 max-w-2xl mx-auto text-lg">Choose the right edition for your workflow. Both editions include core security updates, an optimized kernel, and our premium desktop experience.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Arvix OS Developer Edition -->
+                <div class="glass-card p-10 rounded-3xl relative overflow-hidden group hover:border-primary transition-all duration-500 text-left flex flex-col h-full">
+                    <div class="absolute top-0 right-0 bg-primary text-black text-xs font-bold px-4 py-1 rounded-bl-xl uppercase tracking-wider">Most Popular</div>
+                    <i class="fa-solid fa-terminal text-5xl text-primary mb-6"></i>
+                    <h2 class="text-3xl font-bold mb-2">Developer Edition</h2>
+                    <p class="text-gray-400 text-sm mb-6">Pre-configured with advanced toolchains, penetration testing utilities (Nmap, Wireshark, etc.), and Docker support. Built specifically for ethical hackers and developers.</p>
+                    
+                    <ul class="text-gray-300 text-sm space-y-3 mb-8 flex-grow">
+                        <li><i class="fa-solid fa-check text-primary mr-2"></i> Full Cyber Security Toolkit</li>
+                        <li><i class="fa-solid fa-check text-primary mr-2"></i> Tor Browser & Privacy Tools</li>
+                        <li><i class="fa-solid fa-check text-primary mr-2"></i> Python, Node, & Go Pre-installed</li>
+                    </ul>
+
+                    <button class="w-full bg-primary/10 border border-primary text-primary py-4 rounded-xl font-bold hover:bg-primary hover:text-black transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-download"></i> Download ISO (3.8 GB)
+                    </button>
+                    <p class="text-center text-xs text-gray-500 mt-4">Version 2.0.1 • SHA256 Checksum</p>
+                </div>
+                
+                <!-- Arvix OS Standard Edition -->
+                <div class="glass-card p-10 rounded-3xl relative overflow-hidden hover:border-gray-500 transition-all duration-500 text-left flex flex-col h-full">
+                    <i class="fa-solid fa-laptop text-5xl text-gray-400 mb-6 group-hover:text-white transition-colors"></i>
+                    <h2 class="text-3xl font-bold mb-2">Standard Edition</h2>
+                    <p class="text-gray-400 text-sm mb-6">A clean, bloat-free Debian experience optimized for daily driving, content creation, and media consumption without the heavy security toolchains.</p>
+                    
+                    <ul class="text-gray-300 text-sm space-y-3 mb-8 flex-grow">
+                        <li><i class="fa-solid fa-check text-gray-400 mr-2"></i> Lightning Fast XFCE/Cinnamon UI</li>
+                        <li><i class="fa-solid fa-check text-gray-400 mr-2"></i> Essential Privacy Integrations</li>
+                        <li><i class="fa-solid fa-check text-gray-400 mr-2"></i> Optimized for Battery & Performance</li>
+                    </ul>
+
+                    <button class="w-full bg-transparent border border-gray-600 text-white py-4 rounded-xl font-bold hover:border-white transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-download"></i> Download ISO (2.2 GB)
+                    </button>
+                    <p class="text-center text-xs text-gray-500 mt-4">Version 2.0.1 • SHA256 Checksum</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 glass-card p-6 rounded-2xl inline-block text-left mx-auto">
+                <h3 class="text-lg font-bold text-white mb-2"><i class="fa-solid fa-circle-info text-primary mr-2"></i> System Requirements</h3>
+                <p class="text-sm text-gray-400"><strong>Minimum:</strong> 2GB RAM, 20GB Storage, 64-bit Processor.<br><strong>Recommended:</strong> 4GB+ RAM, 40GB SSD, 64-bit Multi-core Processor.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

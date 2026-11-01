@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Developer - Arvix OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#FF7E00', secondary: '#FFB347', bg: '#050505', cardbg: '#111111' }, fontFamily: { sans: ['Outfit', 'sans-serif'] } } } }
+    </script>
+</head>
+<body class="font-sans antialiased text-white bg-bg">
+    <div class="ambient-glow"></div>
+    
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4 border-b border-white/5 backdrop-blur-md bg-black/50">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3 group">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="h-10 transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_10px_rgba(255,126,0,0.8)]">
+                <span class="text-2xl font-bold tracking-widest text-white">ARVIX<span class="text-primary">OS</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="/" class="nav-link text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="/download" class="nav-link text-gray-400 hover:text-white transition-colors">Download</a>
+                <a href="/about" class="nav-link text-primary hover:text-white transition-colors">About Developer</a>
+                <a href="/contact" class="nav-link text-gray-400 hover:text-white transition-colors">Contact</a>
+            </div>
+            <a href="/download" class="btn-glow hidden md:flex bg-primary/10 border border-primary text-primary px-6 py-2 rounded-full text-sm font-bold hover:bg-primary hover:text-black transition-all">
+                Download v2.0
+            </a>
+        </div>
+    </nav>
+    
+
+    <section class="min-h-screen pt-32 pb-24 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-4" data-aos="fade-right">
+                <div class="glass-card p-6 rounded-3xl text-center relative overflow-hidden group">
+                    <div class="w-48 h-48 mx-auto rounded-full border-4 border-primary/30 bg-black mb-6 flex items-center justify-center overflow-hidden">
+                        <i class="fa-solid fa-user-astronaut text-6xl text-gray-500 group-hover:text-primary transition-colors duration-500"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-1">Aryan Prajapati</h2>
+                    <p class="text-primary font-mono text-sm mb-6">Lead Developer & Architect</p>
+                    
+                    <div class="flex flex-col gap-3">
+                        <a href="https://github.com/aryanprajapati0091" target="_blank" class="w-full py-3 rounded-lg bg-black border border-white/10 hover:border-primary transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-github text-lg"></i> GitHub Profile
+                        </a>
+                        <a href="https://arvixos.online" target="_blank" class="w-full py-3 rounded-lg bg-black border border-white/10 hover:border-secondary transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-globe text-lg"></i> Official Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-8 space-y-8" data-aos="fade-left">
+                <div>
+                    <h1 class="text-4xl font-bold mb-6">The <span class="text-gradient">Vision</span></h1>
+                    <div class="glass-card p-8 rounded-2xl relative">
+                        <i class="fa-solid fa-quote-left absolute top-4 left-4 text-3xl text-white/10"></i>
+                        <p class="text-lg text-gray-400 leading-relaxed italic z-10 relative mt-4">
+                            "I wanted to build a modern Debian-based Linux distribution that combines cybersecurity tools, performance, and an elegant user experience. To provide a fast, secure, privacy-focused Linux distribution for ethical hackers, developers, students, and everyday users while remaining completely open source."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="glass-card p-6 rounded-2xl">
+                        <i class="fa-solid fa-flag-checkered text-2xl text-primary mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Project Genesis</h3>
+                        <p class="text-gray-400 text-sm">Arvix OS was born out of a need for a unified platform that doesn't compromise aesthetic appeal for deep system control and security.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <i class="fa-solid fa-code-branch text-2xl text-secondary mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Core Focus</h3>
+                        <p class="text-gray-400 text-sm">Engineering a Debian base with a custom XFCE environment, optimizing kernel architecture to deliver maximum hardware efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
